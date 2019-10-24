@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 8px;
+    background-color: #505050;
+}
+
+main {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    width: 1200px;
+}
+
+main header,
+main section > * {
+    box-shadow: 8px 8px 8px #000;
+}
+
+main header {
+    width: 100%;
+    position: relative;
+    background-color: #909090;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+main header img:not(.day_of_the_42) {
+    position: absolute;
+}
+
+main header img.day_of_the_42 {
+    width: 500px;
+}
+
+main header img.loupe {
+    right: 30px; 
+    bottom: -15px;
+}
+
+main header img.reload {
+    right: 10px; 
+    top: 10px;
+    width: 20px;
+}
+
+main header img.close {
+    right: 10px; 
+    bottom: 10px;
+}
+
+main section {
+    display: flex;
+    position: relative;
+}
+
+main section > div {
+    margin: 0 10px 0 10px;
+}
+
+main section div.img {
+    width: 65%;
+    height: 500px;
+    border: 8px solid #909090;
+    border-radius: 10px;
+}
+main section div.img img {
+    width: 100%;
+    height: 100%;;
+}
+
+main section .side {
+    position: relative;
+    max-width: 142px;
+    background-color: #909090;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 380px;
+    text-align: center;
+}
+
+main section {
+    justify-content: center;
+}
+
+main section .side img {
+    width: 50%;
+}
+
+main section .side .brick {
+    background-image: url(resources/brick.jpg);
+    width: 100%;
+    height: 70px;
+    margin: auto;
+}
+div.box {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 10px;
+    padding: 16px 16px 50px 16px;
+    background-color: #87ff89;
+    box-shadow: 8px 8px 8px #000;
+ }
+ 
+ div.box input {
+    width: 400px;
+    padding: 5px 16px;
+ }
+ div.box p{
+     font-family: sans-serif;
+ }
+
+ div.box button {
+    padding: 5px 16px;
+ }
+ .span1{
+     font-size: 30px;
+     font-family: serif;
+ }
+ div.box span{
+    text-shadow: 8px 8px 7px #DB1313;
+ }

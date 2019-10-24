@@ -1,0 +1,22 @@
+<- Camera ----------------------------------------------------------------------
+Une instance peut etre construit a partir des valeurs suivant:
+
+*’origin’ : Vertex positionnant la caméra dans le repère monde. Grâce à ce vertex,
+on peut calculer un vecteur puis une matrice de translation.
+*’orientation’ : Matrice de rotation orientant la caméra dans le repère monde.
+*’width’ : Largeur en pixels de l’image voulue. Sert à calculer le ratio.
+’height’ : Hauteur en pixels de l’image voulue. Sert à calculer le ratio.
+’ratio’ : Ratio de l’image. Incompatible avec les clefs ’width’ et ’height’.
+’fov’ : Le champ de vision de l’image projetée en degrés
+’near’ : Le plan de clipping proche.
+’far’ : Le plan de clipping éloigné.
+
+• Soit T la matrice de translation construite à partir du vecteur v. On calcule oppv
+le vecteur opposé de v et on contruit une matrice de translation inverse tT.
+• Soit la matrice de rotation R. On fait une symétrie diagonale (les x deviennent les
+y dans le tableau et vice versa) et on obtient une matrice tR.
+• Dernière étape, on multiplie tR->mult( tT ) et paf, ca fait une "view matrix"
+pour la caméra.
+* La fonction watchVertex transform en 2D un point dans l'escpace 3D grace a une 
+matrice de projection (camera) , la couleur est conservee .
+---------------------------------------------------------------------- Camera ->

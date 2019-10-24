@@ -1,0 +1,12 @@
+<- Vertex ----------------------------------------------------------------------
+Une instance peut etre constuit a partir des valeurs :
+* abscisse x;
+* ordonnee y;
+* profondeur z;
+* homogenes w;
+* color : (red, green, blue);
+
+La classe construit contient les valeurs precedents sauf dans le cas ou le
+variable verbose a faut comme valeur on exlu la color .
+
+---------------------------------------------------------------------- Vertex ->

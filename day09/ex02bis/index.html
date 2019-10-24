@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>todo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="todo.js"></script>
+		<style>
+			.tod {
+
+			text-align: center;
+			border-radius: 12px;
+
+			}			
+			.todo{
+			text-align:center;
+			overflow: auto;
+			font-size:16px;
+			border-style: solid;
+			background-color : #e6fec6;
+			height : 40px;
+			width: 500px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 12px;
+			margin-bottom: 5px;
+
+			}
+			.but{
+			background-color : #b9ecf8;
+			height: 50px;
+			width: 500px;
+			text-align: center;
+			padding: 15px 32px;
+			border-radius: 12px;
+			font-size: 26px;
+			margin-bottom: 5px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		</style>
+	</head>
+	<body onload="loadcookie()">
+		<div style="text-align:center">
+			<button type="block" id="go" class="but" onclick="prom()">New</button>
+		</div>
+		<div id="ft_list" class="tod">
+		</div>
+	</body>
+</html>

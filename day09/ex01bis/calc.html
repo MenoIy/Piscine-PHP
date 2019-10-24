@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>calc</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<div>
+				<input type="text" id="left" value="">
+			</div>
+			<div>
+				<select id="op">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+			</div>
+			<div>
+				<input type="text" id="right" value="">
+			</div>
+			<div>
+				<button type="submit" id="go" value="Try me!" onclick="doop()">Try me!</button>
+			</div>
+		</div>
+		<script>
+				var timer = 30000;
+				function isInt(n) {
+					 return ($.trim(n).match(/^[0-9]+$/));
+						}
+				function doop() 
+				{
+					var er_left = $("#left").val();
+					var er_right = $("#right").val();
+					var left = parseInt(er_left, 10);
+					var right = parseInt(er_right, 10);
+					var op = $("#op").val();
+					var good = true;
+					if (isNaN(er_left) || isNaN(er_right) || !isInt(er_left) || !isInt(er_right))
+						alert("Error :(");
+					else
+					{
+						if (op == "+")
+							var res = left + right;
+						else if (op == "-")
+							var res = left - right;
+						else if (op == "*")
+							var res = left * right;
+						else if (op == "/")
+							var res = left / right;
+						else if (op == "%")
+							var res = left % right;
+						if (isNaN(res) || isNaN(right) || isNaN(left))
+							res = "Error :(";
+						if ((op == "/" || op == "%") && right == 0 && !isNaN(right))
+							res = "It’s over 9000!";
+						if (res != "Error :(")
+							console.log(res);
+						alert(res);
+					}
+				}
+				function time_out()
+				{
+					alert("Please, use me...");
+				}
+				setInterval(function() {time_out()} , timer);
+		</script>
+	</body>
+</html>

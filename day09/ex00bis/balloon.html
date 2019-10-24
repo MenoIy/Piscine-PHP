@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>balloon</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+			.cercle {
+				    width: 200px;
+					height: 200px;
+					border-radius: 50%;
+					background: red;
+					margin-left: auto;
+					margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="cercle"></div>
+		<script>
+			var element = $(".cercle");
+			element.on('click', grow_up);
+			element.on("mouseleave", drop_down);
+			var coleur = ['red' , 'green'  , 'blue'];
+			var key = 0;
+			function grow_up()
+			{
+				var width = element.width() + 10;
+		   		var height = element.height() + 10;
+				key += 1;
+				if (key == 3)
+					key = 0;
+				if (width > 420 || height > 420)
+				{
+					width = 200 ;		
+					height = 200 ;
+				}
+				element.css("background",coleur[key]);
+				element.css("width", width);		
+				element.css("height",height);;
+			}
+			function drop_down()
+			{
+				var width = element.width() - 5;
+		   		var height = element.height() - 5;
+				key -= 1;
+				if (key == -1)
+					key = 2;
+				if (width >= 200 || height >= 200)
+				{
+					element.css("width" ,width) ;		
+					element.css("height" , height);
+				}
+				element.css("background" , coleur[key]);
+			}
+		</script>
+	</body>
+</html>

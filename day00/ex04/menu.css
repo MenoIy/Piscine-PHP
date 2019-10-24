@@ -1,0 +1,25 @@
+.sous_menu div {
+    display: none;
+}
+.sous_menu:hover div {
+    display: block;
+    border: 8px solid black;
+    width :250px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    margin: 5px;
+    
+}
+span{
+    font-family:serif;
+    font-size:44.5px;
+    width :250px;
+    background-color: orange;
+    border: 8px solid black;
+    margin: 5px;
+}
+
+.menu{
+    display: inline-block;
+    vertical-align: top;
+}

@@ -1,0 +1,19 @@
+<- Color ----------------------------------------------------------------------
+Une instance peut etre construit a partir d'une valeur rgb :
+new Color( array( 'rgb' => valeur_rgb ));
+
+Ou a partir des constituants distincts red , green , blue;
+new Color( array( 'red' => valeur_red , 'green' => valeur_green , 'blue' => valeur_blue ));
+
+la classe fournit les méthodes suivantes:
+
+Color	add(Color $color)
+ajoutez chaque couleur constitutive et retourner une nouvelle instance Color.
+
+Color	sub(Color $color)
+Soustrayez chaque couleur constitutive et retourner une nouvelle instance Color.
+
+Color	mult ($f)
+Multiplie chaque couleur constitutive par le facteur $ f et retourne une nouvelle instance Color.
+
+---------------------------------------------------------------------- Color ->

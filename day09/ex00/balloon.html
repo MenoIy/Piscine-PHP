@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>balloon</title>
+		<style>
+			.cercle {
+				    width: 200px;
+					height: 200px;
+					border-radius: 50%;
+					background: red;
+					margin-left: auto;
+					margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="cercle"></div>
+		<script>
+			var element = document.querySelector('.cercle');
+			element.addEventListener('click', grow_up);
+			element.addEventListener("mouseleave", drop_down);
+			var coleur = ['red' , 'green'  , 'blue'];
+			var key = 0;
+			function grow_up()
+			{
+				var width = element.offsetWidth + 10;
+		   		var height = element.offsetHeight + 10;
+				key += 1;
+				if (key == 3)
+					key = 0;
+				if (width > 420 || height > 420)
+				{
+					width = 200 ;		
+					height = 200 ;
+				}
+				element.style.background = coleur[key];
+				element.style.width = width + "px";		
+				element.style.height = height + "px";
+			}
+			function drop_down()
+			{
+				var width = element.offsetWidth - 5;
+		   		var height = element.offsetHeight - 5;
+				key -= 1;
+				if (key == -1)
+					key = 2;
+				if (width >= 200 || height >= 200)
+				{
+					element.style.width = width + "px";		
+					element.style.height = height + "px";
+				}
+				element.style.background = coleur[key];
+			}
+		</script>
+	</body>
+</html>

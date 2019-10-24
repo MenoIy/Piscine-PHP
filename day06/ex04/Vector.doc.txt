@@ -1,0 +1,35 @@
+<- Vector ----------------------------------------------------------------------
+Une instance peut etre constuit a partir des valeurs :
+* Point de depart : orig;
+* Point d'arrive : desti;
+
+La classe construit contient les valeurs :
+* x;
+* y;
+* z;
+* w;
+
+La classe permete de faire des operation sur ou entre les vecteurs;
+les operation sont :
+* magnitude :
+-> a l'aide de l'equation sqrt (x^2 + y^2 + z^2):
+* normalise :
+-> divistion de chaque coordonne du vecteurs par la valeur magnitude ;
+* add :
+-> la somme du deux vecteurs {(x1 + x2), (y1 + y2) , (z1 + z2) , (w1 + w2)};
+* sub :
+-> la soustraction du deux vecteurs {(x1 - x2), (y1 - y2) , (z1 - z2) , (w1 - w2)};
+ les signes apre l'operation sont ignorees ;
+ * opposite :
+ -> multiplication du coordonnes du vecteur par -1;
+ * scalarProduct :
+ -> multiplication du coordonnes du vecteur par  une valeur k passe en parametre ;
+ * dotProduct :
+ -> produit scalairel avec la relation suivante (x1 * x2 + y1 * y2 + z1 * z2 + w1 * w2);
+ * cos :
+ -> cos de l'angle entre deux vecteurs cos(x) = dotprodut / (magnitude du v1 multiplier
+ par la magnitude du v2);
+ * crossProduct
+ ->produit vectoriel du deux vecteurs dont 
+ x = y1*z2 - z1*y2 et y = x1*z2 - z1*x2 et z = x1*y2 - y1*x2 ;
+---------------------------------------------------------------------- Vector ->

@@ -1,0 +1,27 @@
+<- Matrix ----------------------------------------------------------------------
+Une instance peut etre constuit a partir des valeurs :
+*type :IDENTITY, SCALE, RX,RY, RZ, TRANSLATION et PROJECTION;
+*’scale’ : le facteur d’échelle;
+*’angle’ : angle de rotation en radians;
+*’vtc’ : vecteur de translation;
+*’fov’ : champs de vision de la projection en degrés;
+’ratio’ : ratio de l’image projetée;
+’near’ : plan de clipping proche de la projection;
+’far’ : plan de clipping éloigné de la projection;
+
+La classe construit contient a partir des elements precedents est une matrice
+de 4 x 4 , 
+les methode utilisees  sont les suivants :
+*new_matrix :  fournis un matrice de 4x4 remet a des 0;
+*mult : multiple deux matrice entre eux ;
+*transformfromVertex : retourne un vecteur dont les coordonnes sont des operations
+entre les coordonnees du matrice avec le vecteur;
+* gestion d'error au cas ou un element de la list obligatoire est null ; 
+* type_matrix :  lance la construction du matrice passe en parametres ;
+* identity : identation d'un matrice;
+* scalee : multiplier tous les points du matrice par un scale ;
+* translation : translate le matrice avec vecteurs donnees ;
+*rx , ry , rz dont de suite des matrice de rotation sur les ongles x,y,z;
+*projection : retourne une projection de la matrice 3d to 2d ;
+
+---------------------------------------------------------------------- Matrix ->
